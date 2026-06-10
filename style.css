@@ -60,14 +60,11 @@ li:hover {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 200px;
 }
 
 section {
-    padding: 80px 0px;
+    padding: 50px 0px;
 }
 
 /*-------------------- Home Section -------------------------*/
@@ -79,7 +76,6 @@ section {
     padding: 140px 0 100px;
     min-height: 65vh;
     align-items: left;
-    margin-left: -280px;
 }
 
 .home h1 {
@@ -148,14 +144,56 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.37);
 }
 
+/*-------------------- About Section -------------------------*/
+.about {
+    background-color: var(--primary-04);
+    color: var(--neutrals-01);
+    text-align: left;
+    min-height: 90vh;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    max-width: 350px;
+    span {
+        background: linear-gradient(120deg, var(--accent-01) 0%, var(--accent-02) 50%, var(--accent-01) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: var(--neutrals-01);
+    padding: 20px 0;
+}
+
+.section-title {
+    font-size: 1rem;
+    max-width: 800px;
+    color: var(--primary-01);
+}
+
+.about img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+    float: right;
+}
+
 /*-------------------- Services Section -------------------------*/
 .services {
-    background-color: var(--neutrals-04);
-    text-align: center;
+    padding: 0;
 }
 
 .services h2 {
     font-size: 2.5rem;
+    padding: 50px 0 20px;
     margin-bottom: 20px;
 }
 
@@ -172,7 +210,7 @@ section {
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid var(--primary-02);
     align-items: center;
     h1 {
         font-size: 3rem;
@@ -191,26 +229,28 @@ section {
 .service-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.37);
 }
 
 /*-------------------- Projects Section -------------------------*/
 .projects {
-    background-color: var(--primary-03);
-    text-align: center;
+    background: linear-gradient(125deg, var(--primary-01) 0%, var(--neutrals-01) 100%);
+    text-align: left;
+    min-height: 90vh;
 }
 
 .projects h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: var(--primary-04);
 }
 
 .project-card {
-    background: var(--primary-04);
+    background: var(--supporting-01);
     padding: 30px;
     border-radius: 10px;
     transition: transform 0.3s ease;
     border: 2px solid transparent;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -222,7 +262,7 @@ section {
 /*-------------------- Mission Section -------------------------*/
 .mission {
     background-color: var(--neutrals-04);
-    text-align: center;
+    text-align: left;
 }
 
 .mission h2 {
@@ -233,58 +273,13 @@ section {
 .mission p {
     font-size: 1.2rem;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     color: var(--neutrals-01);
 }
-
-/*-------------------- Departments Section -------------------------
-.department {
-    background-color: var(--primary-02);
-    color: white;
-    text-align: center;
-}
-
-.departments h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.department-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.department-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.department-card p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.department-card {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    border: 2px solid transparent;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--primary-04);
-    transition: transform 0.3s ease, border-color 0.3s ease
-}*/
 
 /*-------------------- Contact Section -------------------------*/
 .contact {
     background-color: var(--neutrals-04);
-    text-align: center;
+    text-align: left;
 }
 
 .contact h2 {
@@ -295,8 +290,6 @@ section {
 .contact p {
     font-size: 1.2rem;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     color: var(--neutrals-01);
 }
 
