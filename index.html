@@ -1,9 +1,10 @@
-<!DOCTYPE html lang="en">
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <title>Saarvah</title>
     </head>
 
@@ -52,12 +53,16 @@
                     <h2>Our Services</h2>
                     <div class="service-grid">
                         <div class="service-card">
-                            <h1>&lt; / ></h1>
+                            <div class="user-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
                             <h3>Creating Applications</h3>
                             <p>We create custom web and mobile applications tailored to your business needs.</p>
                         </div>
                         <div class="service-card">
-                            <h1>&#128105;</h1>
+                            <div class="user-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
                             <h3>Providing Consulting</h3>
                             <p>We provide expert technological consulting services to help your business grow and succeed.</p>
                         </div>
@@ -94,29 +99,81 @@
         <section class="mission">
             <div class="container">
                 <h2>Our Mission</h2>
-                <p>Our mission is to make innovation and technology feel more human, without the chaos of applications and consulting.</p>
+                <p class="highlight-box">"Make innovation and technology feel more human, without the chaos of applications and consulting."</p>
             </div>
         </section>
 
         <!----------------------- Get in touch --------------------------->
         <section class="contact">
             <div class="container">
-                <h2>Get in Touch</h2>
-                <p>Contact us to learn more about our services and how we can help your business succeed.</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="send-btn btn">Send Message</button>
-                </form>
-            </div>
-        </section>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="title">Get In Touch</h3>
+                        <div class="contact-method">
+                            <div class="contact-cards">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <p><strong>Email:</strong></p>
+                                    <p><a href="mailto:info@saarvahtech.com">info@saarvahtech.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-cards">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <p><strong>Phone:</strong></p>
+                                    <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-cards">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <p><strong>Address:</strong></p>
+                                    <p>123 Main Street, City, State, ZIP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="contact-form-container">
+                        <h3>Send Us a Message</h3>
 
-        <!---------------------- Send Message ? ------------------------->
-        <section class="send-message">
-            <div class="container">
-                <h2>Thank you for reaching out!</h2>
-                <p>We will get back to you as soon as possible.</p>
+                        <!-----Success Message------>
+                        <div class="success-message" id="success-message">
+                            <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for reaching out. We'll get back to you as soon as possible.</p>
+                    </div>
+
+                        <!-------Contact Form------->
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message*</label>
+                                <textarea id="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="send-btn btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 

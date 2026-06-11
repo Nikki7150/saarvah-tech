@@ -6,10 +6,12 @@
     --accent-01: #0EA5E9;
     --accent-02: #38BDF8;
     --accent-03: #F0F9FF;
+    --accent-04: #b3dbec;
     --neutrals-01: #0F0E2A;
     --neutrals-02: #1E1B4B;
     --neutrals-03: #64748B;
     --neutrals-04: #F8FAFC;
+    --neutrals-05: #e1e4e7;
     --supporting-01: #10B981;
     --supporting-02: #F59E0B;
     --font-family: 'Arial, sans-serif';
@@ -31,7 +33,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: none;
+    background-color: transparent;
 }
 
 li {
@@ -75,7 +77,7 @@ section {
     background: none;
     padding: 140px 0 100px;
     min-height: 65vh;
-    align-items: left;
+    align-items: flex-start;
 }
 
 .home h1 {
@@ -232,6 +234,20 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.37);
 }
 
+.user-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--accent-03);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-01);
+    font-size: 2rem;
+    border: 3px solid var(--accent-01);
+}
+
 /*-------------------- Projects Section -------------------------*/
 .projects {
     background: linear-gradient(125deg, var(--primary-01) 0%, var(--neutrals-01) 100%);
@@ -245,7 +261,7 @@ section {
 }
 
 .project-card {
-    background: var(--supporting-01);
+    background: var(--accent-04);
     padding: 30px;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -262,35 +278,157 @@ section {
 /*-------------------- Mission Section -------------------------*/
 .mission {
     background-color: var(--neutrals-04);
-    text-align: left;
+    text-align: center;
 }
 
 .mission h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
-.mission p {
+.highlight-box {
+    background: var(--neutrals-05);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-01);
+    margin: 20px auto;
+    margin-bottom: 0;
     font-size: 1.2rem;
+    text-align: center;
     max-width: 800px;
-    color: var(--neutrals-01);
 }
 
 /*-------------------- Contact Section -------------------------*/
 .contact {
     background-color: var(--neutrals-04);
     text-align: left;
+    padding-left: 100px;
 }
 
-.contact h2 {
-    font-size: 2.5rem;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: var(--neutrals-05);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-cards:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-detail {
+    font-size: 1.2rem;
+    color: var(--neutrals-01);
+    float: right;
+}
+
+.title {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(120deg, var(--primary-01) 0%, var(--accent-02) 50%, var(--primary-01) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals-04);
+    font-size: 1.5rem;
+    margin: 20px;
+    flex-shrink: 0;
+}
+
+.contact-form-container {
+    background: var(--neutrals-05);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-form-container h3 {
+    color: var(--primary-01);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-.contact p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    color: var(--neutrals-01);
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-02);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: var(--neutrals-04);
+    border: 2px solid var(--neutrals-05);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /*-------------------- Footer -------------------------*/
