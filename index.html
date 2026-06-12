@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <title>Saarvah</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Saarvah Tech</title>
     </head>
 
     <body>
@@ -16,10 +17,12 @@
                     <img src="saarvah.png" alt="Saarvah Logo">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+
+                    <span class="nav-indicator"></span>
                 </ul>
                 <div class="nav-buttons">
                     <a class="join-btn btn" href="#contact">Join Us</a>
@@ -31,23 +34,26 @@
         </header>
         <!-------------------- tagline + buttons ------------------------->
         <section id="home">
+            <div class="stars"></div>
             <div class="container">
+                <img class="home-img img" src="bubbles.svg" alt="Home Image">
                 <h1>Technology should feel <span>Human</span></h1>
                 <p>We build web apps, mobile apps, and software solutions that simplify complexity and empower people to achieve more.</p>
                 <div class="buttons">
                     <a class="join-btn btn" href="#contact">Join Us</a>
                     <a class="learn-btn btn" href="#about">Learn More</a>
                 </div>
+                
             </div>
         </section>
 
         <!------------------------- About Us ----------------------------->
         <section id="about">
             <div class="container">
-                <img src="about.png" alt="About Us Image">
+                <img class="about-img img" src="consulting.svg" alt="About Us Image">
                 <h3 class="section-title">ABOUT US</h3>
                 <h2>Innovation without the <span>chaos</span></h2>
-                <p>Saarvah was founded on a pure belief--technology should make life easier, not harder. We partner with businesses and communities to create digital solutions that are intuitive, scaloable, and human.</p>
+                <p>Saarvah was founded on a pure belief-technology should make life easier, not harder. We partner with businesses and communities to create digital solutions that are intuitive, scalable, and human.</p>
             </div>
 
             <!------------------------- Services ----------------------------->
@@ -195,7 +201,7 @@
                     </div>
                     <div class="footer-section">
                         <h3>Quick Links</h3>
-                        <ul class="nav-links">
+                        <ul class="footer-nav-links">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
