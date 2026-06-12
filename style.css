@@ -156,7 +156,9 @@ nav {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 1200px;
+    width: min(1200px, 72vw);
+    max-width: 100%;
+    height: auto;
     opacity: 0.8;
     pointer-events: none;
 }
@@ -266,12 +268,18 @@ nav {
     color: var(--primary-01);
 }
 
-#about img {
+#about .about-img {
+    display: block;
     width: 100%;
     max-width: 500px;
+    height: auto;
     border-radius: 10px;
     float: right;
-    margin-right: 90px;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
 }
 
 /*-------------------- Services Section -------------------------*/
@@ -704,6 +712,7 @@ footer {
     
     .mobile-menu {
         display: block;
+        margin-right: 80px;
     }
     
     .container {
@@ -754,6 +763,25 @@ footer {
     section {
         height: fit-content;
     }
+
+    .mission .highlight-box {
+        max-width: 100%;
+    }
+
+    .about-img {
+        float: none;
+        margin: 20px auto 0;
+        width: min(100%, 420px);
+    }
+
+    .home-img {
+        width: min(100%, 600px);
+        opacity: 0.55;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -777,6 +805,15 @@ footer {
     .contact-icon {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    #about .about-img,
+    .home-img {
+        width: min(100%, 360px);
+    }
+
+    .mobile-menu {
+        margin-right: 30px;
     }
 }
 
