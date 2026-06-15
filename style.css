@@ -60,7 +60,7 @@ a:hover {
 
 section {
     padding: clamp(40px, 6vw, 80px) 0;
-    scroll-margin-top: 0;
+    scroll-margin-top: 100px;
 }
 
 /*-------------------- Nav bar -------------------------*/
@@ -282,16 +282,62 @@ nav {
     height: auto;
 }
 
-/*-------------------- Services Section -------------------------*/
-.services {
-    padding: 0;
-    height: auto;
+/*-------------------- Mission Section -------------------------*/
+section .mission {
+    text-align: center !important;
+    align-items: center !important;
+    padding-bottom: 20px !important;
+    margin-top: 20px !important;
 }
 
-.services h2 {
+.mission .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mission h2 {
     font-size: 2.5rem;
-    padding: 50px 0 20px;
     margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.highlight-box {
+    background: var(--neutrals-05);
+    padding: 30px !important;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-01);
+    margin: 20px auto;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px !important;
+    --reveal-y: 0px;
+    --card-transform: none;
+    transform: translateY(var(--reveal-y)) var(--card-transform);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.highlight-box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --card-transform: rotateY(-5deg) scale(1.02);
+}
+
+/*-------------------- Services Section -------------------------*/
+#services {
+    background-color: var(--neutrals-04);
+    color: var(--neutrals-01);
+    text-align: left;
+    height: auto;
+    padding: 50px 0 50px;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .service-grid {
@@ -372,39 +418,6 @@ nav {
 .reveal.is-visible {
     opacity: 1;
     --reveal-y: 0px;
-}
-
-/*-------------------- Mission Section -------------------------*/
-.mission {
-    background-color: var(--neutrals-04);
-    text-align: center;
-}
-
-.mission h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    margin-top: 0;
-}
-
-.highlight-box {
-    background: var(--neutrals-05);
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 4px solid var(--accent-01);
-    margin: 20px auto;
-    margin-bottom: 0;
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 800px;
-    --reveal-y: 0px;
-    --card-transform: none;
-    transform: translateY(var(--reveal-y)) var(--card-transform);
-     transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.highlight-box:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --card-transform: rotateY(-5deg) scale(1.02);
 }
 
 /*-------------------- Contact Section -------------------------*/

@@ -1,0 +1,24 @@
+{
+  "name": "saarvah-tech",
+  "version": "1.0.0",
+  "description": "Unofficial website for Saarvah, a technology company focused on building human-centered digital solutions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikki7150/saarvah-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nikki7150/saarvah-tech/issues"
+  },
+  "homepage": "https://github.com/Nikki7150/saarvah-tech#readme",
+  "dependencies": {
+    "resend": "^6.12.4"
+  }
+}
