@@ -154,3 +154,40 @@ for (let i = 0; i < STAR_COUNT; i++) {
 
     starsContainer.appendChild(star);
 }
+
+/*--------------------- Contact form email sending functionality -------------------------*/
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const data = {
+        firstName: document.getElementById("first-name").value,
+        lastName: document.getElementById("last-name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+
+        document.getElementById("success-message").style.display = "block";
+
+        form.reset();
+
+    } else {
+
+        alert("Failed to send message.");
+
+    }
+
+});
