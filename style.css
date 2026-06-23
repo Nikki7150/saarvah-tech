@@ -636,6 +636,12 @@ footer {
     object-fit: contain;
 }
 
+#linkedin-logo {
+    background: linear-gradient(120deg, var(--accent-04) 0%, var(--accent-02) 40%, var(--accent-04) 100%);
+    color: var(--neutrals-01);
+    transition: color 0.3s;
+}
+
 .footer-section a:hover {
     color: var(--primary-03);
 }
@@ -700,6 +706,11 @@ footer {
         text-align: center;
     }
 
+    .logo-main {
+        margin-left: 20px;
+        width: 200px;
+    }
+
     .footer .nav-links {
         display: flex;
         position: static;
@@ -743,7 +754,19 @@ footer {
     }
 
     .contact-form-container {
-        padding: 30px 25px;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        margin-bottom: 30px !important;
+        width: 90%;
+    }
+
+    .contact-cards {
+        width: 90%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
     }
 
     .form-row {
@@ -786,6 +809,11 @@ footer {
         gap: 30px;
     }
 
+    .logo-main {
+        margin-left: 20px;
+        width: 150px;
+    }
+
     #contact {
         padding: 0;
     }
@@ -818,3 +846,30 @@ footer {
 }
 
 
+/*media responsiveness for horizontal mobile devices*/
+@media (max-width: 1024px) and (orientation: landscape) {
+    .logo img {
+        width: 180px;
+    }
+
+    .nav-links {
+        gap: 30px;
+        padding-left: 0;
+    }
+
+    .contact-cards {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-container {
+        margin-top: 20px;
+    }
+}
