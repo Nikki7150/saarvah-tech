@@ -23,6 +23,7 @@ html, body {
     margin: 0;
     background: linear-gradient(125deg, var(--neutrals-01) 0%, var(--primary-01) 20%, var(--neutrals-01) 50%);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -117,7 +118,10 @@ nav {
 #home {
     text-align: left;
     color: white;
-    background: none;
+    background-image: url('background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 235px 0 100px;
     min-height: 65vh;
     align-items: flex-start;
@@ -268,6 +272,17 @@ nav {
     color: var(--primary-01);
     margin-top: 0;
 
+}
+
+
+#about img {
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 10px;
+
+    float: right;
+    margin-bottom: 20px;
 }
 
 /*-------------------- Mission Section -------------------------*/
